@@ -1,0 +1,100 @@
+<html>
+<head>
+<style>
+h1 {
+text-align: center;
+color: blue ;
+//margin-left: -310px;
+//margin-bottom: -41px;
+
+}
+.main{
+  width:34%;
+  display:flex;
+  flex-direction:column;
+  justify-content: center;
+  flex-shrink: 0px;
+} 
+.main2{
+  width:100%;
+  display:flex;
+  flex-direction:row;
+  justify-content: space-between;
+  flex-shrink: 0px;
+}
+.rectangle{
+    width: 506px;
+    height:95px;
+    margin-right:423px;
+    margin-left:auto;
+    margin-top:23px;
+    margin-bottom: 0px;
+    background-color:white;
+    border-style: solid;
+    border-color: blue;
+    border-radius:25px;
+}
+
+
+.img1 {
+ width: 2%;
+ height: 7%;
+ margin-left: 820px;
+ margin-top: 13px;
+  
+}
+.icon {
+ display: flex;
+flex-direction: row;
+}
+
+body {
+  background-color : #EDEDED;
+  display: flex;
+  flex-direction: column;
+ // width: 100%;
+  align-items: center;
+ // margin-right:auto;
+ //margin-left: auto;
+}
+
+</style>
+</head>
+<body>
+<div class =main>
+
+<div class = main2>
+<h1>Notes</h1>
+
+<div class= icon>
+<img src="../Images/search_black_24dp.svg">
+<img src="../Images/menu-bar-icon.svg">
+</div>
+</div>
+</div>
+<div id="rectangle"></div>
+<div class="rectangle">
+<img src="../Images/edit.png" style="margin-left:437px;margin-top:1%;margin-bottom : -500; margin-right:20px;width: 5%; height:24%;" >
+<img src="../Images/Vector(1).png" style="margin-left:472px;margin-top:2%;margin-bottom : -500; margin-right:20px;width: 3%; height:19%;" >
+</div>
+ <div class="rectangle">
+<img src="../Images/edit.png" style="margin-left:437px;margin-top:1%;margin-bottom : -500; margin-right:20px;width: 5%; height:24%;" >
+<img src="../Images/Vector(1).png" style="margin-left:472px;margin-top:2%;margin-bottom : -500; margin-right:20px;width: 3%; height:19%;" >
+</div>
+<div class="rectangle">
+<img src="../Images/edit.png" style="margin-left:437px;margin-top:1%;margin-bottom : -500; margin-right:20px;width: 5%; height:24%;" >
+<img src="../Images/Vector(1).png" style="margin-left:472px;margin-top:2%;margin-bottom : -500; margin-right:20px;width: 3%; height:19%;" >
+</div>  
+
+<img src = "../Images/add1.svg" style="margin-left: 432px; margin-top : 8px; width : 2%;height : 7%;">
+<script>
+var array=["notes", "create", "account"];
+
+function Myfunctions(){
+for ( i = 0; i <array.length ; i++)
+console.log(array[i]);
+} 
+document.getElementById("rectangle").innerHTML = array;
+</script>
+</body>
+</html>

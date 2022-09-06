@@ -1,0 +1,22 @@
+<title>MyNotes</title>
+<div class="main">
+  <div class="container1">
+    <h1>Notes</h1>
+  </div>
+  <div class="container2">
+    <h2>Welcome</h2>
+    <input
+      class="box"
+      placeholder="Username"
+      type="text"
+      [formControl]="Username"
+    />
+    <input
+      class="box"
+      placeholder="Password"
+      type="password"
+      [formControl]="Password"
+    />
+      <button class = "button"routerLink="/home" (click)="open()">SignIn</button>
+  </div>
+</div>
