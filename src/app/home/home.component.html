@@ -10,16 +10,34 @@
       <div class="icon"><fa-icon [icon]="fatext"></fa-icon> Chat</div>
       <div class="icon"><fa-icon [icon]="fabell"></fa-icon> Notification</div>
     </div>
+    <div class="base">
+      <div class="icon"><fa-icon [icon]="fapro"></fa-icon> Profile</div>
+    </div>
   </div>
   <div class="portion">
+    <h1>Notes</h1>
     <div class="topnav">
       <p>Private</p>
       <p>Public</p>
+      <button class="button" routerLink="/notes" (click)="open()">
+        <fa-icon [icon]="faplus"></fa-icon> Create Notes
+      </button>
     </div>
     <hr class="hr" />
     <div class="searchbar">
-      <fa-icon [icon]="famagnifyingglass"></fa-icon>Search Notes
+      <fa-icon [icon]="famagnifyingglass"></fa-icon>Search notes
     </div>
     <hr class="hr" />
+    <div class="card-wrapper">
+      <mat-card>
+        <mat-card-header>
+		<mat-card-title>{{tit}}</mat-card-title>
+        </mat-card-header>
+
+        <mat-card-content>
+		<p>{{tex}}</p>
+        </mat-card-content>
+      </mat-card>
+    </div>
   </div>
 </div>

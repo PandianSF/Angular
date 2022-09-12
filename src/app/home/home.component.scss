@@ -10,16 +10,16 @@
   height: 100%;
   width: 20%;
   background-color: rgb(84, 28, 214);
-  text-align: left;
   display: flex;
   flex-direction: column;
   justify-items: center;
+  row-gap: 500px;
 }
 
 .portion {
   height: 100%;
   width: 80%;
-  background-color: lightgrey;
+  background-color: white;
   display: flex;
   flex-direction: column;
   margin: auto;
@@ -29,18 +29,13 @@
   width: 100%;
   color: black;
   display: flex;
-  flex-direction: row;
-  font-size:20px;
-  text-align: left;
-  column-gap: 50px;
-  justify-content: flex-start;
+  font-size: 20px;
+  column-gap: 250px;
 }
 
 .sidenav {
-  overflow: auto;
   display: flex;
   flex-direction: column;
-  height: 100%;
   text-align: center;
 }
 
@@ -48,22 +43,43 @@
   display: flex;
   flex-direction: row;
   margin: 20px;
+  cursor: pointer;
   column-gap: 30px;
-  color:white;
-  font-size:20px;
+  color: white;
+  font-size: 20px;
   align-content: flex-start;
 }
 
 .searchbar {
   width: 100%;
-  margin:20px;
-  display:flex;
-  flex-direction:row;
-  column-gap:20px;
-  font-size:20px;
+  margin: 20px;
+  display: flex;
+  flex-direction: row;
+  column-gap: 20px;
+  font-size: 20px;
 }
 
 .hr {
-  width:100%;
-  column-gap:normal;
-  }
+  width: 100%;
+}
+
+.base {
+  width: 100%;
+}
+
+.button {
+  width: 20%;
+  border: none;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 15px;
+  background-color: rgb(84, 28, 214);
+  color: white;
+}
+
+.card-wrapper {
+	height:20%;
+	width:30%;
+	background-color:lightgrey;
+	color:black
+}
