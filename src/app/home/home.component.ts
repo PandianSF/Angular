@@ -25,8 +25,22 @@ export class HomeComponent implements OnInit {
   fapro = faUser;
   faplus = faPlus;
 
-  constructor() {}
+  result: any[];
 
-  open() {}
-  ngOnInit(): void {}
+  title: any;
+  text: any;
+
+  constructor() {
+    this.result = [];
+  }
+
+  submitForm() {
+    (this.result = JSON.parse(localStorage.getItem('savedData') || '{}')),
+      console.log(this.result);
+  }
+  ngOnInit(): void {
+    this.result = JSON.parse(localStorage.getItem('savedData') || '{}');
+    console.log(this.result, 'RES');
+  }
+ 
 }

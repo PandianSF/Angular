@@ -19,7 +19,7 @@
     <div class="topnav">
       <p>Private</p>
       <p>Public</p>
-      <button class="button" routerLink="/notes" (click)="open()">
+      <button class="button" routerLink="/notes" (click)="submitForm()">
         <fa-icon [icon]="faplus"></fa-icon> Create Notes
       </button>
     </div>
@@ -31,11 +31,9 @@
     <div class="card-wrapper">
       <mat-card>
         <mat-card-header>
-		<mat-card-title>{{tit}}</mat-card-title>
+		<mat-card-title *ngFor="let item of result">{{item.tit}}</mat-card-title>
         </mat-card-header>
-
-        <mat-card-content>
-		<p>{{tex}}</p>
+        <mat-card-content *ngFor = "let item of result">{{item.tex}}
         </mat-card-content>
       </mat-card>
     </div>
