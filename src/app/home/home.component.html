@@ -8,12 +8,13 @@
     </div>
     <hr class="hr" />
 
-    <div class="card-wrapper">
-      <mat-card *ngFor="let item of result">
+    <div class="card-wrapper"*ngFor="let item of result">
+	    <mat-card>
         <mat-card-header>
           <mat-card-title>{{item.tit}}</mat-card-title>
         </mat-card-header>
         <mat-card-content>{{item.tex}} </mat-card-content>
+	<button>Delete </button>
       </mat-card>
     </div>
   </div>

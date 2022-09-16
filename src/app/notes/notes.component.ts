@@ -8,7 +8,7 @@ import { Output, EventEmitter, Input } from '@angular/core';
   styleUrls: ['./notes.component.scss'],
 })
 export class NotesComponent implements OnInit {
-//  @Input() myResult: any;
+  //  @Input() myResult: any;
   //@Output() result: EventEmitter<any> = new EventEmitter();
 
   edit: any;
@@ -19,7 +19,6 @@ export class NotesComponent implements OnInit {
 
   ngOnInit(): void {
     this.editForm();
-    
   }
   editForm() {
     this.edit = new FormGroup({
@@ -31,8 +30,8 @@ export class NotesComponent implements OnInit {
   saveFile() {
     this.store.push(this.edit.value);
     console.log(this.store);
- //   this.result.emit(this.store);
-       localStorage.setItem('savedData', JSON.stringify(this.store));
-  }  
+    //   this.result.emit(this.store);
+    this.edit.reset()
+    localStorage.setItem('savedData', JSON.stringify(this.store));
   }
-
+}

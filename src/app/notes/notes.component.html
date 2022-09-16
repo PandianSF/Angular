@@ -17,8 +17,10 @@
       maxlength="250"
       formControlName="tex"
     ></textarea>
-    <button class="button" routerLink = "/home" (click)="saveFile()">Save</button>
-   
-    <button class="button">Edit</button>
+    <div class = "buttons">
+    <button class="button"  (click)="saveFile()">Save</button>
+
+    <button class="button" routerLink = "/home" >View Notes</button>
+    </div>
   </div>
 </form>

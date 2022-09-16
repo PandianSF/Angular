@@ -42,5 +42,6 @@ export class HomeComponent implements OnInit {
     this.result = JSON.parse(localStorage.getItem('savedData') || '{}');
     console.log(this.result);
   }
+  
  
 }
