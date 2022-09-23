@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { NotesComponent } from '../notes/notes.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
@@ -8,7 +8,9 @@ import { faGroupArrowsRotate } from '@fortawesome/free-solid-svg-icons';
 import { faComment } from '@fortawesome/free-solid-svg-icons';
 import { faBell } from '@fortawesome/free-solid-svg-icons';
 import { faUser } from '@fortawesome/free-solid-svg-icons'; **/
-import { faPlus } from '@fortawesome/free-solid-svg-icons';  
+import { faPlus } from '@fortawesome/free-solid-svg-icons';
+import { DatePipe } from '@angular/common';
+import { MatButtonModule } from '@angular/material/button';
 
 @Component({
   selector: 'app-home',
@@ -16,32 +18,30 @@ import { faPlus } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-
+  @Input() item: any;
   famagnifyingglass = faMagnifyingGlass;
-/**  fanotes = faNoteSticky;
+  /**  fanotes = faNoteSticky;
   fateams = faGroupArrowsRotate;
   fatext = faComment;
   fabell = faBell;
   fapro = faUser; **/
-  faplus = faPlus;  
+  faplus = faPlus;
 
-  result: any[];
+  final: any;
 
   title: any;
   text: any;
+  createdAt: any;
+  notesId: any;
 
-  constructor() {
-    this.result = [];
-  }
+  constructor() {}
 
-  submitForm() {
-    (this.result = JSON.parse(localStorage.getItem('savedData') || '{}')),
+  /** TO GET DATA FROM LOCAL STORAGE
+   submitForm() {
+    (this.result = JSON.parse(localStorage.getItem('savedData') || '[]')),
       console.log(this.result);
-  }  
+  }**/
   ngOnInit(): void {
-    this.result = JSON.parse(localStorage.getItem('savedData') || '{}');
-    console.log(this.result);
+    console.log(this.item);
   }
-  
- 
 }

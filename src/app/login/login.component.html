@@ -2,27 +2,31 @@
 <div class="main">
   <div class="container1">
     <h1>Notes</h1>
+    <img
+      src="../../assets/notes.jpg"
+      width="500px"
+      height="500px"
+      class="center"
+    />
   </div>
   <div class="container2">
     <h2>Welcome</h2>
-    <form [formGroup] = "login">
-     <input
-      class="box"
-      placeholder="Username"
-      type="text"
-      formControlName="Username"
-    />
-    <input
-      class="box"
-      placeholder="Password"
-      type="password"
-      formControlName="Password"
-    />
-    <div *ngIf = "login.errors?.['required']">
-		    login is required
-    </div>
-    
-    <button class="button"  (click)="open()">SignIn</button>
+    <form [formGroup]="login">
+      <input
+        class="box"
+        placeholder="Username"
+        type="text"
+        formControlName="Username"
+      />
+      <input
+        class="box"
+        placeholder="Password"
+        type="password"
+        formControlName="Password"
+      />
+      <div *ngIf="login.errors?.['required']">login is required</div>
+
+      <button class="button" (click)="open()">SignIn</button>
     </form>
   </div>
 </div>

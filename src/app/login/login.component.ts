@@ -6,6 +6,7 @@ import {
   FormBuilder,
 } from '@angular/forms';
 import { Router } from '@angular/router';
+import { NotesService } from '../notes.service';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -19,14 +20,16 @@ export class LoginComponent implements OnInit {
     { Username: 'Askin', Password: 'askin123' },
   ];
   login: any;
-  
-  constructor(private router: Router) {}
+
+  constructor(private router: Router, private notesService:NotesService) {}
 
   ngOnInit() {
     this.login = new FormGroup({
       Username: new FormControl('', [Validators.required]),
       Password: new FormControl('', [Validators.required]),
     });
+    this.notesService.getList()
+		    
   }
   open() {
     const userName = this.login.value.Username;
@@ -39,6 +42,8 @@ export class LoginComponent implements OnInit {
     if (ifExists && ifExists.Password === passWord) {
       this.router.navigate(['/home']);
       console.log('userExists');
+    } else {
+      console.log('Username and Password are incorrect!');
     }
 
     console.log(this.login.value.Username);

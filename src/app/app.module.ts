@@ -10,19 +10,22 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NotesComponent } from './notes/notes.component';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
+import { NotesService } from './notes.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [AppComponent, LoginComponent, HomeComponent, NotesComponent],
   imports: [
     BrowserModule,
-   ReactiveFormsModule,
+    HttpClientModule,
+    ReactiveFormsModule,
     AppRoutingModule,
     MatCardModule,
     MatButtonModule,
     FormsModule,
     FontAwesomeModule,
   ],
-  providers: [],
+  providers: [NotesService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

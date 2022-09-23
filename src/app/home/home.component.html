@@ -1,20 +1,14 @@
 <div class="main">
   <div class="portion">
-    <h1>Notes</h1>
-    <div class="topnav">
-      <button class="button" routerLink="/notes" (click)="submitForm()">
-        <fa-icon [icon]="faplus"></fa-icon> Create Notes
-      </button>
-    </div>
     <hr class="hr" />
 
-    <div class="card-wrapper"*ngFor="let item of result">
-	    <mat-card>
+    <div class="card-wrapper" *ngFor="let item of item">
+      <mat-card>
         <mat-card-header>
           <mat-card-title>{{item.tit}}</mat-card-title>
         </mat-card-header>
         <mat-card-content>{{item.tex}} </mat-card-content>
-	<button>Delete </button>
+        <mat-card-footer>{{ item.createdAt }} </mat-card-footer>
       </mat-card>
     </div>
   </div>

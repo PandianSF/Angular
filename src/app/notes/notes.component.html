@@ -1,26 +1,34 @@
 <h1>Notes</h1>
-<form [formGroup]="edit">
-  <div class="main">
-    <textarea
-      class="title"
-      placeholder="Title"
-      type="text"
-      maxlength="20"
-      formControlName="tit"
-    >
-    </textarea>
+<div class="topnav">
+  <button class="buttonss" (click)="view()">
+    <fa-icon [icon]="faplus"></fa-icon> Create Notes
+  </button>
+</div>
+<div *ngIf="!formField">
+  <form [formGroup]="edit">
+    <div class="main">
+      <textarea
+        class="title"
+        placeholder="Title"
+        type="text"
+        formControlName="tit"
+      >
+      </textarea>
 
-    <textarea
-      class="text"
-      placeholder="Type your notes here"
-      type="text"
-      maxlength="250"
-      formControlName="tex"
-    ></textarea>
-    <div class = "buttons">
-    <button class="button"  (click)="saveFile()">Save</button>
+      <textarea
+        class="text"
+        placeholder="Type your notes here"
+        type="text"
+        formControlName="tex"
+      ></textarea>
+      <div class="buttons">
+        <button class="button" (click)="saveFile()">Save</button>
 
-    <button class="button" routerLink = "/home" >View Notes</button>
+        <button class="button" (click)="show()">View notes</button>
+      </div>
     </div>
-  </div>
-</form>
+  </form>
+</div>
+<div *ngIf="formField">
+  <app-home [item]="store"></app-home>
+</div>
